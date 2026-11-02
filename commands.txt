@@ -1,0 +1,489 @@
+    1  mkdir devops
+    2  cd devops
+    3  mkdir week1
+    4  cd week1
+    5  nano hellow.sh
+    6  ls
+    7  cat hellow.sh
+    8  cd ..
+    9  git init
+   10  git remote add origin https://github.com/x00229636/devopsWeek1.git
+   11  git remote -v
+   12  git add week1/hellow.sh
+   13  git status
+   14  git commit -m "Add week1 hello script"
+   15  git config --global user.name "Makuachukwu Okeke"
+   16  git config --global user.email "X00229636@tudublin.ie"
+   17  git commit -m "Add week1 hello script"
+   18  git branch -M main
+   19  git push -u origin main
+   20  cd week1
+   21  nano hellow.sh
+   22  cat hellow.sh
+   23  git status
+   24  git add hellow.sh
+   25  git commit -m "Update hello message"
+   26  git push
+   27  cd devops
+   28  mkdir week2
+   29  cd week2
+   30  pwd
+   31  cd ..
+   32  pwd
+   33  ls -al ~/.ssh
+   34  ssh-keygen -t ed25519 -C "X00229636@mytudublin.ie"
+   35  ls -al ~/.ssh
+   36  ssh -T git@github.com
+   37  cat ~/.ssh/id_ed25519.pub
+   38  ssh -T git@github.com
+   39  cd week2
+   40  pwd
+   41  git clone git@github.com:x00229636/devopsWeek1.git
+   42  ls
+   43  cd devopsWeek1
+   44  git branch
+   45  ls
+   46  cd week1
+   47  ls
+   48  cat hellow.sh
+   49  nano hellow.sh
+   50  cat hellow.sh
+   51  bash hellow.sh
+   52  cd ..
+   53  git status
+   54  git add week1/hellow.sh
+   55  git commit -m "Version 3 of hello file"
+   56  git push origin main
+   57  git branch
+   58  pwd
+   59  git log --oneline
+   60  git tag ver1 2090407
+   61  git tag ver2 8a7e9c8
+   62  git tag ver3 5c3960d
+   63  git tag
+   64  git push origin ver1
+   65  git push origin ver2
+   66  git push origin ver3
+   67  cd ../..
+   68  pwd
+   69  mkdir week2tag
+   70  cd week2tag
+   71  git clone git@github.com:x00229636/devopsWeek1.git
+   72  cd devopsWeek1
+   73  git fetch --tags
+   74  git tag
+   75  git checkout -b tag-test ver1
+   76  git branch
+   77  cd week1
+   78  ls
+   79  nano hellow.sh
+   80  cat hellow.sh
+   81  bash hellow.sh
+   82  cd ..
+   83  git status
+   84  git add week1/hellow.sh
+   85  git commit -m "Update hello file for tag test"
+   86  git push -u origin tag-test
+   87  git branch
+   88  cd week2
+   89  cd ~/devops/week2/devopsWeek1
+   90  git branch
+   91  git checkout main
+   92  git pull origin main
+   93  git status
+   94  git checkout -b CR101
+   95  git branch
+   96  echo 'echo This is cr101' > cr101.sh
+   97  cat cr101.sh
+   98  git add cr101.sh
+   99  git commit -m "Add CR101"
+  100  git push -u origin CR101
+  101  git checkout main
+  102  git checkout -b CR102
+  103  git branch
+  104  echo 'echo This is cr102' > cr102.sh
+  105  cat cr102.sh
+  106  git add cr102.sh
+  107  git commit -m "Add CR102"
+  108  git push -u origin CR102
+  109  git checkout main
+  110  git pull origin main
+  111  git merge CR102
+  112  git push origin main
+  113  git branch -d CR102
+  114  git push origin --delete CR102
+  115  git branch -a
+  116  ls ~/.ssh
+  117  cat ~/.ssh/id_ed25519.pub
+  118  ssh -T git@github.com
+  119  cd ~
+  120  git clone git@github.com:Jorah09/devopsWeek1.git
+  121  cd devopsWeek1
+  122  git remote -v
+  123  cd ~/devops/week2/devopsWeek1
+  124  pwd
+  125  ls
+  126  ls ~/.ssh
+  127  ssh-keygen -t ed25519 -C "okekejoanne23@gmail.com"
+  128  ls ~/.ssh
+  129  ssh-keygen -t ed25519 -C "okekejoanne23@gmail.com"
+  130  ls ~/.ssh
+  131  cat ~/.ssh/id_ed25519_personal.pub
+  132  nano ~/.ssh/config
+  133  ssh -T git@github-personal
+  134  git remote -v
+  135  git branch
+  136  git status
+  137  git config user.name "Makuachukwu Okeke"
+  138  git config user.email "okekejoanne23@gmail.com"
+  139  git remote set-url origin git@github-personal:x00229636/devopsWeek1.git
+  140  git remote -v
+  141  git checkout main
+  142  git checkout -b CR103
+  143  git branch
+  144  nano cr103.sh
+  145  cat cr103.sh
+  146  git status
+  147  git add cr103.sh
+  148  git status
+  149  git commit -m "Add CR103 file"
+  150  git push -u origin CR103
+  151  git checkout main
+  152  git branch
+  153  cat hellow.sh
+  154  find . -name "hellow.sh"
+  155  cat week1/hellow.sh
+  156  nano week1/hellow.sh
+  157  cat week1/hellow.sh
+  158  git status
+  159  git add week1/hellow.sh
+  160  git status
+  161  git commit -m "Add CR104 to hello file"
+  162  git push origin main
+  163  git status
+  164  git branch -a
+  165  git log --oneline --all --decorate -5
+  166  git remote -v
+  167  git config user.name
+  168  git config user.email
+  169  cd ~/devops
+  170  git clone git@github.com:x00229636/devopsProj.git
+  171  cd devopsProj
+  172  git branch
+  173  git remote -v
+  174  nano count1.sh
+  175  ls
+  176  nano count2.sh
+  177  ls
+  178  nano count3.sh
+  179  cat > count4.sh <<'EOF'
+  180  #!/bin/bash
+  181  echo 4
+  182  ./count5.sh
+  183  EOF
+  184  cat > count5.sh <<'EOF'
+  185  #!/bin/bash
+  186  echo 5
+  187  ./count6.sh
+  188  EOF
+  189  cat > count6.sh <<'EOF'
+  190  #!/bin/bash
+  191  echo 6
+  192  ./count7.sh
+  193  EOF
+  194  cat > count7.sh <<'EOF'
+  195  #!/bin/bash
+  196  echo 7
+  197  ./count8.sh
+  198  EOF
+  199  cat > count8.sh <<'EOF'
+  200  #!/bin/bash
+  201  echo 8
+  202  ./count9.sh
+  203  EOF
+  204  cat > count9.sh <<'EOF'
+  205  #!/bin/bash
+  206  echo 9
+  207  ./count10.sh
+  208  EOF
+  209  cat > count10.sh <<'EOF'
+  210  #!/bin/bash
+  211  echo 10
+  212  EOF
+  213  ls
+  214  mv 'count1.sh ' count1.sh
+  215  ls
+  216  chmod +x count1.sh count2.sh count3.sh count4.sh count5.sh count6.sh count7.sh count8.sh count9.sh count10.sh
+  217  ./count1.sh
+  218  git status
+  219  git add .
+  220  git status
+  221  git commit -m "Add count scripts"
+  222  git push -u origin main
+  223  nano count10.sh
+  224  ./count1.sh
+  225  git status
+  226  cd devops
+  227  git status
+  228  cd devopsProj
+  229  git status
+  230  cat count10.sh
+  231  ./count1.sh
+  232  git add count10.sh
+  233  git commit -m "Change count10 output to TEN; fixes #12"
+  234  git push
+  235  ./count1.sh
+  236  git status
+  237  git log --oneline
+  238  cd ~/devops
+  239  ls
+  240  cd ~/devops/devopsProj
+  241  ls
+  242  git branch
+  243  git remote -v
+  244  cd ~/devops
+  245  mkdir v1
+  246  cd ~/devops/v1
+  247  git clone -b main git@github.com:x00229636/devopsProj.git devopsProj1
+  248  cd devopsProj1
+  249  git checkout -b ONE-V1
+  250  git branch
+  251  ls
+  252  find . -name 'count1.sh' -o -name 'count1.py'
+  253  nano count1.sh
+  254  cat count1.sh
+  255  git status
+  256  git add count1.sh
+  257  git commit -m "Change count1 to ONE(1)"
+  258  git push -u origin ONE-V1
+  259  cd ~/devops
+  260  mkdir v2
+  261  cd v2
+  262  git clone -b main git@github.com:x00229636/devopsProj.git devopsProj1
+  263  cd devopsProj1
+  264  git checkout -b ONE-V2
+  265  find . -name 'count1.sh' -o -name 'count1.py'
+  266  nano count1.sh
+  267  git add count1.sh
+  268  git commit -m "Change count1 to 1(ONE)"
+  269  git push -u origin ONE-V2
+  270  git branch
+  271  cd ~/devops
+  272  mkdir mergeTest
+  273  cd ~/devops/mergeTest
+  274  git clone -b main git@github.com:x00229636/devopsProj.git devopsProj1
+  275  cd devopsProj1
+  276  git branch
+  277  git fetch origin
+  278  git merge origin/ONE-V1
+  279  git push origin main
+  280  git merge origin/ONE-V2
+  281  git status
+  282  nano count1.sh
+  283  git add count1.sh
+  284  git commit -m "Resolve count1 merge conflict keeping ONE(1)"
+  285  git push origin main
+  286  cat count1.sh
+  287  cd ~/devops
+  288  mkdir v1-2
+  289  cd ~/devops/v1-2
+  290  git clone -b main git@github.com:x00229636/devopsProj.git devopsProj1
+  291  cd devopsProj1
+  292  git checkout -b TWO-V1
+  293  find . -name 'count2.sh' -o -name 'count2.py'
+  294  nano count2.sh
+  295  cd ~/devops/mergeTest/devopsProj1
+  296  git branch -a
+  297  cat count1.sh
+  298  git log --oneline -5
+  299  cd ~/devops
+  300  mkdir v1-2
+  301  cd v1-2
+  302  git clone -b main git@github.com:x00229636/devopsProj.git devopsProj1
+  303  cd devopsProj1
+  304  git branch
+  305  git status
+  306  cat count2.sh
+  307  git add count2.sh
+  308  git commit -m "Change count2 to TWO(2)"
+  309  git push -u origin TWO-V1
+  310  cat count2.sh
+  311  cd ~/devops
+  312  mkdir -p v2-2
+  313  cd ~/devops/v2-2
+  314  git clone -b main git@github.com:x00229636/devopsProj.git devopsProj1
+  315  cd devopsProj1
+  316  git checkout -b TWO-V2
+  317  cat count2.sh
+  318  nano count2.sh
+  319  git add count2.sh
+  320  git commit -m "Change count2 to 2(TWO)"
+  321  git push -u origin TWO-V2
+  322  cd ~/devops/v1-2/devopsProj1
+  323  git status
+  324  git log --oneline -3
+  325  git diff origin/main..origin/TWO-V1 -- count2.sh
+  326  pwd
+  327  git remote -v
+  328  git branch -a
+  329  git status
+  330  git log --oneline --decorate -5
+  331  cd ~/devops/v2-2/devopsProj1
+  332  git status
+  333  git branch --show-current
+  334  git fetch origin
+  335  git diff origin/main...origin/TWO-V2 -- count2.sh
+  336  git log --oneline --graph --decorate -8 origin/main origin/TWO-V1 origin/TWO-V2
+  337  git show origin/main:count2.sh
+  338  git show origin/TWO-V1:count2.sh
+  339  git show origin/TWO-V2:count2.sh
+  340  git branch TWO-V2-backup
+  341  git reset --hard ff85996
+  342  sed -i 's/^echo 2$/echo "2(TWO)"/' count2.sh
+  343  cat count2.sh
+  344  git add count2.sh
+  345  git commit -m "Change count2 to 2(TWO)"
+  346  git push --force-with-lease origin TWO-V2
+  347  git remote -v
+  348  ls
+  349  cd devopsWeek1
+  350  git status
+  351  git remote -v
+  352  git remote set-url origin https://github.com/pearse1104/X00229636.git
+  353  git remote -v
+  354  git push -u origin main
+  355  git remote -v
+  356  ssh -T git@github.com
+  357  git remote -v
+  358  git config --global user.name "Makuachukwu Okeke"
+  359  git config --global user.email "x00229636@mytudublin.ie"
+  360  git clone https://github.com/pearse1104/X00229636.git
+  361  cd X00229636
+  362  echo "test" > test.txt
+  363  git add test.txt
+  364  git commit -m "Add test file"
+  365  git branch -M main
+  366  git push -u origin main
+  367  pwd
+  368  ssh -T git@github.com
+  369  git config --global user.email
+  370  gh auth status
+  371  gh auth login
+  372  gh auth status
+  373  cd -
+  374  ls
+  375  cd X00229636
+  376  git pull
+  377  git remote set-url origin
+  378  git@github.com:pearse1104/x00229636.git
+  379  git remote set-url origin git@github.com:pearse1104/X00229636.git
+  380  git remote -v
+  381  git pull
+  382  git status
+  383  ls -a
+  384  git log --online
+  385  git log --oneline
+  386  cat test.txt
+  387  gh auth status
+  388  ssh -T git@github.com
+  389  cd
+  390  gh repo create mockca --public --clone
+  391  cd mockca
+  392  pwd
+  393  echo 'echo "hello v1"' > hello.sh
+  394  cat hello.sh
+  395  chmod +x hello.sh
+  396  ./hello.sh
+  397  git add .
+  398  git  commit -m "hello v1"
+  399  git branch -M main
+  400  git push -u origin main
+  401  gh auth refresh -s project
+  402  gh auth status
+  403  echo 'echo "hello v2"' >> hello.sh
+  404  ./hello.sh
+  405  git add .
+  406  git commit -m "hello v2"
+  407  git push
+  408  echo 'echo "hello v3"' >> hello.sh
+  409  ./hello.sh
+  410  git add .
+  411  git commit -m "hello v3"
+  412  git push
+  413  git log --oneline
+  414  git tag -a v1 e445930 -m "version 1"
+  415  git tag -a v2 8bf4eff -m "version 2"
+  416  git tag -a v3 95d62bb -m "version 3"
+  417  git tag
+  418  git log --oneline
+  419  git push origin --tags
+  420  cd
+  421  mkdir tagtest
+  422  cd tagtest
+  423  gh repo clone x00229636/mockca
+  424  cd mockca
+  425  git fetch --tags
+  426  git tag
+  427  git switch -c tag-test v1
+  428  cat hello.sh
+  429  echo 'echo "hello from tag-test"' >> hello.sh
+  430  ./hello.sh
+  431  git add .
+  432  git commit -m "tag-test change"
+  433  git push -u origin tag-test
+  434  cd
+  435  cd mockca
+  436  git switch main
+  437  git pull
+  438  git switch -c CR101
+  439  echo 'echo "This is cr101"' > cr101.sh
+  440  chmod +x cr101.sh
+  441  ./cr101.sh
+  442  git add .
+  443  git commit -m "add cr101"
+  444  git push -u origin CR101
+  445  git switch  main
+  446  git switch -c CR102
+  447  echo'echo"this is cr102"' > cr102.sh
+  448  echo 'echo "this is cr102"' > cr102.sh
+  449  chmod +x cr102.sh
+  450  ./cr102.sh
+  451  git add .
+  452  git commit -m "add cr102"
+  453  git push -u origin cr102
+  454  git push -u origin CR102
+  455  git branch -a
+  456  gh pr create --base main --head CR101 --title "Merge CR101" --body "Adds cr101.sh"
+  457  gh pr list
+  458  gh pr merge 1 --merge --delete-branch
+  459  git switch main
+  460  git pull
+  461  git merge CR102
+  462  git push
+  463  git push origin --delete CR102
+  464  git branch -d CR102
+  465  ls
+  466  git branch -a
+  467  git fetch --prune
+  468  git branch -a
+  469  git switch -c ONE-V1
+  470  echo 'echo "ONE(1)"' > hello.sh
+  471  git add .
+  472  git commit -m "ONE-V1 change"
+  473  git switch main
+  474  git switch -c ONE-V2
+  475  echo 'echo "1(ONE)"' > hello.sh
+  476  git add .
+  477  git commit -m "ONE-V2 change"
+  478  git switch main
+  479  git merge ONE-V1
+  480  git merge ONE-V2
+  481  git status
+  482  cat hello.sh
+  483  nano hello.sh
+  484  cat hello.sh
+  485  git add hello.sh
+  486  git commit -m "fix conflict, keep ONE-V1"
+  487  git push
+  488  git log --oneline --graph
+  489  history > commands.txt
