@@ -1,3 +1,1 @@
-echo "hello v1"
-echo "hello v2"
-echo "hello v3"
+echo "1(ONE)"
