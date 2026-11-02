@@ -487,3 +487,10 @@
   487  git push
   488  git log --oneline --graph
   489  history > commands.txt
+  490  tail commands.txt
+  491  git add commands.txt
+  492  git commit -m "commands used"
+  493  git push
+  494  gh issue create --title "create helloworld echo file" --body "echo hello Pearse from lab6" --assignee @me --label enhancement
+  495  gh issue list
+  496  history > commands.txt
